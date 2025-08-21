@@ -9,9 +9,12 @@ enum Race {
     halflingStout, human, tiefling
 };
 
-struct Player {
+class Player {
     Class playerClass;
     Race playerRace;
+    
+
+    public:
     short level{};
     short str{};
     short dex{};
@@ -19,4 +22,8 @@ struct Player {
     short intel{};
     short wis{};
     short cha{};
+    Player();
+    Player(Class playerClass, Race playerRace, short level);
+    void chooseClass(int cNum);
+    void chooseRace(int rNum);
 };

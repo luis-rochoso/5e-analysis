@@ -8,11 +8,11 @@ int main() {
 
     cout << "Digite o número correspondente à classe: ";
     cin >> num;
-    p1.playerClass == num;
+    
 
     cout << "Digite o número correspondente à raça: ";
     cin >> num;
-    p1.playerRace == num;
+
 
     cout << "\nDigite os valores dos atributos: \nForça: ";
     cin >> p1.str;
@@ -29,5 +29,15 @@ int main() {
 
     cout << "\nDigite o nível do personagem: ";
     cin >> p1.level;
+
+    // switch (p1.playerClass)
+    // {
+    // case artificer:
+    //     cout << "oi" << endl;
+    //     break;
+    
+    // default:
+    //     break;
+    // }
     return 0;
 }
