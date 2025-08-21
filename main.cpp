@@ -1,32 +1,33 @@
 #include <iostream>
 #include "src/player.h"
+using namespace std;
 
 int main() {
     Player p1{};
     short num{};
 
-    std::cout << "Digite o número correspondente à classe: ";
-    std::cin >> num;
+    cout << "Digite o número correspondente à classe: ";
+    cin >> num;
     p1.playerClass == num;
 
-    std::cout << "Digite o número correspondente à raça: ";
-    std::cin >> num;
+    cout << "Digite o número correspondente à raça: ";
+    cin >> num;
     p1.playerRace == num;
 
-    std::cout << "\nDigite os valores dos atributos: \nForça: ";
-    std::cin >> p1.str;
-    std::cout << "Destreza: ";
-    std::cin >> p1.dex;
-    std::cout << "Constituição: ";
-    std::cin >> p1.con;
-    std::cout << "Inteligência: ";
-    std::cin >> p1.intel;
-    std::cout << "Sabedoria: ";
-    std::cin >> p1.wis;
-    std::cout << "Carisma: ";
-    std::cin >> p1.cha;
+    cout << "\nDigite os valores dos atributos: \nForça: ";
+    cin >> p1.str;
+    cout << "Destreza: ";
+    cin >> p1.dex;
+    cout << "Constituição: ";
+    cin >> p1.con;
+    cout << "Inteligência: ";
+    cin >> p1.intel;
+    cout << "Sabedoria: ";
+    cin >> p1.wis;
+    cout << "Carisma: ";
+    cin >> p1.cha;
 
-    std::cout << "\nDigite o nível do personagem: ";
-    std::cin >> p1.level;
+    cout << "\nDigite o nível do personagem: ";
+    cin >> p1.level;
     return 0;
 }
