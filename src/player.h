@@ -1,20 +1,25 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 enum Class {
-    null, artificer, barbarian, bard, cleric, druid, fighter, monk,
+    nullClass, artificer, barbarian, bard, cleric, druid, fighter, monk,
     paladin, ranger, rogue, sorcerer, warlock, wizard
 };
 
 enum Race {
-    null, dragonborn, dwarfHill, dwarfMountain, elfDrow, elfHigh, elfWood,
+    nullRace, dragonborn, dwarfHill, dwarfMountain, elfDrow, elfHigh, elfWood,
     gnomeForest, gnomeRock, halfElf, halfOrc, halflingLightfoot,
     halflingStout, human, tiefling
 };
 
 class Player {
+    public:
+    
+    // Construtor padrão de Player
+    Player();
+
     Class playerClass;
     Race playerRace;
-    
-
-    public:
     short level{};
     short str{};
     short dex{};
@@ -22,8 +27,9 @@ class Player {
     short intel{};
     short wis{};
     short cha{};
-    Player();
-    Player(Class playerClass, Race playerRace, short level);
+
     void chooseClass(int cNum);
     void chooseRace(int rNum);
 };
+
+#endif
