@@ -2,36 +2,27 @@
 #include "./src/player.h"
 using namespace std;
 
+// compile com g++ main.cpp ./src/player.cpp -o a.out
+
 int main() {
     Player p1;
-    short cNum{};
-    short rNum{};
+    short aux{};
+
     
     cout << "Digite o número correspondente à classe: ";
-    cin >> cNum;
+    cin >> aux;
+    p1.chooseClass(aux);
         
     cout << "Digite o número correspondente à raça: ";
-    cin >> rNum;
+    cin >> aux;
+    p1.chooseRace(aux);
 
     cout << "Digite o nível do personagem: ";
-    cin >> p1.level;
+    cin >> aux;
+    p1.setLevel(aux);
 
-        
-
-
-    // cout << "\nDigite os valores dos atributos: \nForça: ";
-    // cin >> p1.str;
-    // cout << "Destreza: ";
-    // cin >> p1.dex;
-    // cout << "Constituição: ";
-    // cin >> p1.con;
-    // cout << "Inteligência: ";
-    // cin >> p1.intel;
-    // cout << "Sabedoria: ";
-    // cin >> p1.wis;
-    // cout << "Carisma: ";
-    // cin >> p1.cha;
-
+    p1.setScores(8, 16, 14, 10, 16, 8);
+    p1.infoDump();
 
     return 0;
 }
