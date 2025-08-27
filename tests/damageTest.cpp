@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../src/damage.hpp"
 #include "../src/player.hpp"
-
+// compile com g++ ./tests/damageTest.cpp ./src/damage.cpp ./src/player.cpp -o ./tests/damageTest.out
 int main() {
     Player p1 = {};
     p1.setScores(16, 8, 14, 10, 16, 8);
