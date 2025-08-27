@@ -7,7 +7,7 @@ enum DmgType {
 };
 
 struct Damage {
-    short value;
+    float value;
     DmgType type;
     bool magic {false};
 };

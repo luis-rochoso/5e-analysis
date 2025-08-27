@@ -1,5 +1,5 @@
 #include <iostream>
-#include "player.h"
+#include "player.hpp"
 
 Player::Player() {
     playerClass = nullClass;
@@ -14,7 +14,7 @@ Player::Player() {
 }
 
 void Player::chooseClass(short cNum) {
-    switch (cNum) {
+        switch (cNum) {
         case 1: playerClass = artificer; break;
         case 2: playerClass = barbarian; break;
         case 3: playerClass = bard; break;
