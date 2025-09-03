@@ -58,6 +58,28 @@ void Player::chooseRace(short rNum) {
 
 void Player::setLevel(short lNum) {
     level = lNum;
+    setProf(level);
+    return;
+}
+
+void Player::setProf(short level) {
+    if (level < 5) {
+        prof = 2;
+        return;
+    }
+    if (level < 9) {
+        prof = 3;
+        return;
+    }
+    if (level < 13) {
+        prof = 4;
+        return;
+    }
+    if (level < 17) {
+        prof = 5;
+        return;
+    }
+    prof = 6;
     return;
 }
 
@@ -81,6 +103,10 @@ Race Player::getRace() {
 
 short Player::getLevel() {
     return level;
+}
+
+short Player::getProf() {
+    return prof;
 }
 
 short Player::getStr() {
@@ -156,4 +182,5 @@ void Player::infoDump() {
     std::cout << "Inteligência: " << getIntel() << std::endl;
     std::cout << "Sabedoria: " << getWis() << std::endl;
     std::cout << "Carisma: " << getCha() << std::endl;
+    std::cout << std::endl << "Bônus de proficiência: " << prof << std::endl;
 }

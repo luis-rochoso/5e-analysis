@@ -18,21 +18,22 @@ enum DmgType {
 };
 
 struct Damage {
-    float value;
-    DmgType type;
+    float value {};
+    DmgType type {};
     bool magic {false};
 };
 
 class Attacker {
-    short toHit;
-    Damage dmg;
+    short toHit {};
+    Damage dmg ;
 
     public:
 
-    /** Construtor parametrizado para um ataque
-    @param pc Player de referência
-    @param modifier Indicador de qual atributo usar no ataque
-    @param dmgDie Dado de dano do ataque    
+    /** 
+    * Construtor parametrizado para um ataque
+    * @param pc Player de referência
+    * @param modifier Indicador de qual atributo usar no ataque
+    * @param dmgDie Dado de dano do ataque    
     */
     Attacker(Player pc, Skill modifier, Die dmgDie);
 };

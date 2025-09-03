@@ -1,25 +1,26 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <string>
-// definição do tipo "Classe" (todas oficiais)
+// Definição do tipo "Classe" (todas oficiais)
 enum Class {
     nullClass, artificer, barbarian, bard, cleric, druid, fighter, monk,
     paladin, ranger, rogue, sorcerer, warlock, wizard
 };
 
-// definição do tipo "Raça" (todas do PHB)
+// Definição do tipo "Raça" (todas do PHB)
 enum Race {
     nullRace, dragonborn, dwarfHill, dwarfMountain, elfDrow, elfHigh, elfWood,
     gnomeForest, gnomeRock, half_Elf, half_Orc, halflingLightfoot,
     halflingStout, human, tiefling
 };
 
-// definição da classe "Player" que representa um personagem jogável
+// Definição da classe "Player" que representa um personagem jogável
 class Player {
     Class playerClass{};
     Race playerRace{};
 
     short level{};
+    short prof{};
     short str{};
     short dex{};
     short con{};
@@ -32,13 +33,15 @@ class Player {
     // Construtor padrão de Player
     Player();
 
-    /** Método para determinar a classe de um player a partir
+    /** 
+     * Método para determinar a classe de um player a partir
      * de seu inteiro correspondente.
      * @param cNum Inteiro correspondente à classe
      */
     void chooseClass(short cNum);
 
-    /** Método para determinar a raça de um player
+    /** 
+     * Método para determinar a raça de um player
      * a partir de seu inteiro correspondente.
      * @param rNum Inteiro correspondente à raça 
      */
@@ -48,6 +51,12 @@ class Player {
      * @param lNum Valor do nível 1 <= lNum <= 20
      */
     void setLevel(short lNum);
+
+    /**
+     * Método para definir o bônus de proficiência de um player
+     * @param level Nível do player
+    */
+    void setProf(short level);
 
     /** Método para definir todos os atributos de um player de uma vez
      * @param strV Valor da Força
@@ -73,6 +82,12 @@ class Player {
      * @return Nível do player
      */
     short getLevel();
+
+    /**
+     * Método para checar o bônus de proficiência de um Player
+     * @return Bônus de proficiência do Player
+    */
+    short getProf();
 
     /** Método para checar a Força de um Player
      * @return Força do Player
