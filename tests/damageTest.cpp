@@ -5,6 +5,7 @@
 int main() {
     Player p1 = {};
     p1.setScores(16, 8, 14, 10, 16, 8);
+    p1.setLevel(1);
 
     Attacker(p1, str, d4);
     return 0;
