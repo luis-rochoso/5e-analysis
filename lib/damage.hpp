@@ -90,7 +90,6 @@ class Attacker {
      * @return Resultado da rolagem de ataque
      */
     int atkRoll() {
-        std::cout << "Bônus do ataque: " << toHit << std::endl;
         return roll(d20) + toHit;};
 
     /**
@@ -98,7 +97,6 @@ class Attacker {
      * @return Resultado da rolagem de dano
      */
     int damageRoll() {
-        std::cout << "Bônus do dano: " << dmg.bonus << std::endl;
         return roll(dmg.dice) + dmg.bonus;
     }
 };
