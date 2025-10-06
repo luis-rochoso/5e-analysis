@@ -131,5 +131,4 @@ class Player {
     void infoDump();
 };
 
-
 #endif
