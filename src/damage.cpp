@@ -1,11 +1,10 @@
+#include <cstdlib>
 #include "../lib/player.hpp"
 #include "../lib/damage.hpp"
+#include "../lib/diceRolling.hpp"
 
-float dieAvg(Die dice) {
-    return (dice / 2) + 0.5;
-}
-
-Attacker::Attacker(Player pc, Skill modifier = str, Die dmgDie = d4) {
+Attacker::Attacker(Player pc, Skill modifier = str, Die dmgDie = d4, DmgType type = acid) {
+    dmg.dice = dmgDie;
     switch (modifier) {
         case str:
         toHit = pc.getProf() + ((pc.getStr() - 10) / 2);
@@ -35,4 +34,8 @@ Attacker::Attacker(Player pc, Skill modifier = str, Die dmgDie = d4) {
         toHit = pc.getProf();
         dmg.value = dieAvg(dmgDie);
     }
+}
+
+int Attacker::atkRoll() {
+    return roll(d20);
 }

@@ -1,13 +1,7 @@
 #ifndef DAMAGE_H
 #define DAMAGE_H
 #include "player.hpp"
-
-enum Die {
-    d4 = 4, d6 = 6, d8 = 8, d10 = 10, d12 = 12
-};
-
-float dieAvg(Die dice);
-
+#include "diceRolling.hpp"
 enum Skill {
     str = 1, dex, con, intel, wis, cha
 };
@@ -18,6 +12,7 @@ enum DmgType {
 };
 
 struct Damage {
+    Die dice;
     float value {};
     DmgType type {};
     bool magic {false};
@@ -25,7 +20,7 @@ struct Damage {
 
 class Attacker {
     short toHit {};
-    Damage dmg ;
+    Damage dmg;
 
     public:
 
@@ -33,9 +28,16 @@ class Attacker {
     * Construtor parametrizado para um ataque
     * @param pc Player de referência
     * @param modifier Indicador de qual atributo usar no ataque
-    * @param dmgDie Dado de dano do ataque    
+    * @param dmgDie Dado de dano do ataque
+    * @param type Tipo de dano do ataque
     */
-    Attacker(Player pc, Skill modifier, Die dmgDie);
+    Attacker(Player pc, Skill modifier, Die dmgDie, DmgType type);
+
+    /**
+     * Realiza uma jogada de ataque
+     * @return Resultado da rolagem de ataque
+     */
+    int atkRoll();
 };
 
 class Saver {
