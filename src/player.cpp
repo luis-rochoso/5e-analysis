@@ -175,12 +175,12 @@ std::string Player::sayRace() {
 }
 
 void Player::infoDump() {
-    std::cout << "O jogador é um " << sayClass() << " da raça " << sayRace() << " e de nível " << getLevel() << ".\n";
-    std::cout << "Seus atributos são:\n\nForça: " << getStr() << std::endl;
-    std::cout << "Destreza: " << getDex() << std::endl;
-    std::cout << "Constituição: " << getCon() << std::endl;
-    std::cout << "Inteligência: " << getIntel() << std::endl;
-    std::cout << "Sabedoria: " << getWis() << std::endl;
-    std::cout << "Carisma: " << getCha() << std::endl;
-    std::cout << std::endl << "Bônus de proficiência: " << prof << std::endl;
+    std::cout << "O jogador é um " << sayClass() << " da raça " << sayRace() << " e de nível " << getLevel() << ".\n"
+              << "Seus atributos são:\n\nForça: " << getStr() << std::endl
+              << "Destreza: " << getDex() << std::endl
+              << "Constituição: " << getCon() << std::endl
+              << "Inteligência: " << getIntel() << std::endl
+              << "Sabedoria: " << getWis() << std::endl
+              << "Carisma: " << getCha() << std::endl
+              << std::endl << "Bônus de proficiência: " << prof << std::endl;
 }
