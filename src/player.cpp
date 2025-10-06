@@ -1,17 +1,5 @@
 #include <iostream>
-#include "player.hpp"
-
-Player::Player() {
-    playerClass = nullClass;
-    playerRace = nullRace;
-    level = 1;
-    str = 0;
-    dex = 0;
-    con = 0;
-    intel = 0;
-    wis = 0;
-    cha = 0;
-}
+#include "../lib/player.hpp"
 
 void Player::chooseClass(short cNum) {
         switch (cNum) {

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../src/damage.hpp"
-#include "../src/player.hpp"
+#include "../lib/damage.hpp"
+#include "../lib/player.hpp"
 // compile com g++ ./tests/damageTest.cpp ./src/damage.cpp ./src/player.cpp -o ./tests/damageTest.out
 int main() {
     Player p1 = {};
@@ -8,6 +8,6 @@ int main() {
     p1.setLevel(1);
 
     Attacker(p1, str, d4);
-    
+
     return 0;
 }

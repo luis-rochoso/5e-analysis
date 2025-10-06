@@ -1,5 +1,5 @@
-#include "damage.hpp"
-#include "player.hpp"
+#include "../lib/player.hpp"
+#include "../lib/damage.hpp"
 
 float dieAvg(Die dice) {
     return (dice / 2) + 0.5;

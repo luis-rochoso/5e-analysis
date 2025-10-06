@@ -16,22 +16,19 @@ enum Race {
 
 // Definição da classe "Player" que representa um personagem jogável
 class Player {
-    Class playerClass{};
-    Race playerRace{};
+    Class playerClass{nullClass};
+    Race playerRace{nullRace};
 
-    short level{};
-    short prof{};
-    short str{};
-    short dex{};
-    short con{};
-    short intel{};
-    short wis{};
-    short cha{};
+    short level{1};
+    short prof{2};
+    short str{0};
+    short dex{0};
+    short con{0};
+    short intel{0};
+    short wis{0};
+    short cha{0};
 
     public:
-    
-    // Construtor padrão de Player
-    Player();
 
     /** 
      * Método para determinar a classe de um player a partir

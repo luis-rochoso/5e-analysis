@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../src/player.hpp"
+#include "../lib/player.hpp"
 using namespace std;
 
 // compile com g++ ./tests/playerInfoTest.cpp ./src/player.cpp -o ./tests/playerInfoTest.out
