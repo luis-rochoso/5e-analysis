@@ -5,7 +5,7 @@ float dieAvg(Die dice) {
     return (dice / 2) + 0.5;
 }
 
-Attacker::Attacker(Player pc, Skill modifier, Die dmgDie) {
+Attacker::Attacker(Player pc, Skill modifier = str, Die dmgDie = d4) {
     switch (modifier) {
         case str:
         toHit = pc.getProf() + ((pc.getStr() - 10) / 2);

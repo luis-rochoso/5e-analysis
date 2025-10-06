@@ -35,7 +35,7 @@ class Attacker {
     * @param modifier Indicador de qual atributo usar no ataque
     * @param dmgDie Dado de dano do ataque    
     */
-    Attacker(Player pc, Skill modifier, Die dmgDie);
+    Attacker(Player pc, Skill modifier = str, Die dmgDie = d4);
 };
 
 class Saver {
@@ -44,4 +44,4 @@ class Saver {
     Damage dmg;
 };
 
-#endif
+#endif;
